@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillSwap - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg-color-light: linear-gradient(120deg, #fd73eb, #f375de);
+      --text-color-light: #fff;
+      --card-bg-light: rgba(255, 255, 255, 0.1);
+
+      --bg-color-dark: #1e1e2f;
+      --text-color-dark: #fceff9;
+      --card-bg-dark: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body {
+      background: var(--bg-color-light);
+      min-height: 100vh;
+      color: var(--text-color-light);
+    }
+
+    body.dark-mode {
+      background: var(--bg-color-dark);
+      color: var(--text-color-dark);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .toggle-switch {
+      margin-left: 20px;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 2rem;
+    }
+
+    .hero-card {
+      background-color: var(--card-bg-light);
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      max-width: 700px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(237, 136, 136, 0.3);
+    }
+
+    body.dark-mode .hero-card {
+      background-color: var(--card-bg-dark);
+    }
+
+    .hero-card h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-card p {
+      font-size: 1.1rem;
+    }
+
+    .hero-card button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #ffeaa7;
+      color: #333;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero-card button:hover {
+      background-color: #ffd07d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Toggle Switch Styles */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 25px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 25px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 4px;
+      bottom: 3.5px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #ffb6c1;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SkillSwap</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="team.html">Team</a>
+      <a href="create-profile.html">Profile</a>
+
+      <div class="toggle-switch">
+        <label class="switch">
+          <input type="checkbox" id="modeToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <h2>Welcome to SkillSwap ✨</h2>
+      <p>A platform where students connect, learn, and exchange skills to grow together.</p>
+      <a href="user-dashboard.html">
+        <button>🚀 Get Started</button>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 SkillSwap. All rights reserved.
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("modeToggle");
+    toggle.addEventListener("change", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+
+</body>
+</html>

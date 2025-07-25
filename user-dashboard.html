@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | SkillSwap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      color: #5a67d8;
+    }
+
+    .card p {
+      margin: 0.4rem 0;
+      color: #444;
+    }
+
+    .skill-tag {
+      background-color: #edf2f7;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      margin-right: 5px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>🌟 SkillSwap Dashboard</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Shreya Raut</h3>
+      <p><strong>Skills:</strong> <span class="skill-tag">C#</span> <span class="skill-tag">CSS</span></p>
+      <p><strong>Wants to learn:</strong> <span class="skill-tag">JavaScript</span> <span class="skill-tag">AI</span></p>
+      <p><em>Loves building beautiful UIs 🌸</em></p>
+    </div>
+
+    <div class="card">
+      <h3>Parth Mahadik</h3>
+      <p><strong>Skills:</strong> <span class="skill-tag">Python</span> <span class="skill-tag">C++</span></p>
+      <p><strong>Wants to learn:</strong> <span class="skill-tag">React</span> <span class="skill-tag">Firebase</span></p>
+      <p><em>Hackathon lover and backend enthusiast 🚀</em></p>
+    </div>
+
+    <div class="card">
+      <h3>Vini Sawant</h3>
+      <p><strong>Skills:</strong> <span class="skill-tag">HTML</span> <span class="skill-tag">Java</span></p>
+      <p><strong>Wants to learn:</strong> <span class="skill-tag">Github usage </span> <span class="skill-tag">C++</span></p>
+      <p><em>Hackathon lover and ffrontends enthusiast 🚀</em></p>
+    </div>
+    <!-- Add more cards as needed -->
+  </div>
+</body>
+</html>

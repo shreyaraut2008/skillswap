@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Profile | SkillSwap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-container {
+      background-color: #fff;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .submit-btn {
+      margin-top: 1.5rem;
+      background-color: #5a67d8;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #434190;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <h2>✨ Create Your SkillSwap Profile</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="e.g., Shreya Raut" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="e.g., shreya@email.com" required>
+
+      <label for="skills">Your Skills</label>
+      <input type="text" id="skills" placeholder="e.g., Web Dev, Python, UI/UX" required>
+
+      <label for="learning">Skills You Want to Learn</label>
+      <input type="text" id="learning" placeholder="e.g., AI, Blockchain, Java" required>
+
+      <label for="bio">Short Bio</label>
+      <textarea id="bio" placeholder="Tell us about yourself..."></textarea>
+
+      <button class="submit-btn" type="submit">Save Profile</button>
+    </form>
+  </div>
+</body>
+</html>
